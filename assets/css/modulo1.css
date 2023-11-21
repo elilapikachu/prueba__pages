@@ -1,0 +1,255 @@
+@import "./index.css";
+@import "./Nuestras-fotografias.css";
+@import "./modulo2.css";
+@import "./Clientes.css";
+@import "./Nuestros-fotografos.css";
+@import "./Registro.css";
+
+:root {
+    --negro: black;
+    --gris: #262626;
+    --blanco: #fff;
+    --letra: "open sans";
+    --semiBlanco: #f2f2f2;
+    --transparente: #f2f2f254;
+    --colorRosa: #ffceda;
+    --colorAzul: #1d2b64d8;
+    --colorRosaClaro: #f8cddab0;
+    --sombra: #00000080;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--letra);
+}
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color: var(--negro);
+    font-family: var(--letra);
+    font-size: 1.875rem;
+    text-align: center;
+    margin-bottom: 3.75rem;
+}
+
+.gradient {
+    background: var(--colorAzul);
+    background: -webkit-linear-gradient(to left,
+            var(--colorRosaClaro),
+            var(--colorAzul));
+    background: linear-gradient(to left, var(--colorRosaClaro), var(--colorAzul));
+}
+
+.gradient_port {
+    background: var(--colorAzul);
+    background: -webkit-linear-gradient(to left,
+            var(--colorRosaClaro),
+            var(--colorAzul)),
+        url(../img/inicio/portada.jpg);
+    background: linear-gradient(to left, var(--colorRosaClaro), var(--colorAzul)),
+        url(../img/inicio/portada.jpg);
+}
+
+.header {
+    width: 100%;
+    height: 30.25rem;
+    position: relative;
+}
+
+.icono {
+    position: absolute;
+    height: 6.5rem;
+    width: 7.5rem;
+    margin: 5px 0 0 85%;
+}
+
+.u_logeado {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cerrar {
+    margin: 6.5% 0 0 6.25rem;
+    padding: 0.313rem;
+    border-radius: 0.313rem;
+    border: 0.188rem solid var(--negro);
+    cursor: pointer;
+}
+
+.Nom_usuario {
+    margin: 1.563rem 0 0 1.25rem;
+}
+
+nav {
+    position: absolute;
+    margin: 1.25rem 0 0 1.25rem;
+}
+
+.menu__ul {
+    display: none;
+}
+
+#menu:checked~.menu__ul {
+    display: block;
+}
+
+#menu {
+    display: none;
+}
+
+.menu {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 0.188rem solid var(--negro);
+    border-radius: 0.313rem;
+    width: 3.75rem;
+    height: 1.875rem;
+    line-height: 1.875rem;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.menu__li {
+    display: block;
+    background-color: var(--transparente);
+    border: 1px solid var(--negro);
+    margin: 0.313rem;
+    padding: 0.188rem;
+    border-radius: 3.125rem;
+}
+
+a {
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 0.938rem;
+}
+
+.header__texto {
+    display: flex;
+    height: 25.875rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header__texto h1 {
+    font-size: 3.125rem;
+    font-family: var(--letra);
+    color: var(--negro);
+}
+
+.header__texto h2 {
+    color: var(--gris);
+}
+
+.header__texto h4 {
+    font-size: 1.575rem;
+    font-weight: 100;
+    color: var(--negro);
+}
+
+
+footer {
+    background: var(--negro);
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor__fooder {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid var(--blanco);
+}
+
+.contenedor__info {
+    color: var(--blanco);
+    border-bottom: 1px solid var(--blanco);
+    padding-bottom: 0.313rem;
+    margin-bottom: 0.625rem;
+}
+
+.contenedor__info p {
+    color: var(--blanco);
+}
+
+.contenedor__info img {
+    width: 90%;
+    height: 6dvh;
+}
+
+@media screen and (max-width: 1005px) {
+    .icono{
+        margin: 5px 0 0 80%;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .icono{
+        margin: 5px 0 0 70%;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .icono{
+        margin: 5px 0 0 70%;
+    }
+}
+
+@media screen and (max-width: 655px) {
+    .header__texto {
+        display: flex;
+        justify-content:end;
+    }
+    .contenedor__fooder {
+        display: grid;
+        grid-template-columns: 60px 60px 60px;
+    } 
+}
+
+@media screen and (max-width: 520px) {
+
+    .u_logeado {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .Nom_usuario {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }    
+}
+
+@media screen and (max-width: 420px) {
+    
+    .contenedor__fooder {
+        display: grid;
+        grid-template-columns: 30px 30px 30px;
+        width: 100%;
+    }
+    
+}
+
+
+
